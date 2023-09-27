@@ -7,10 +7,6 @@ tags: [computer science, algorithms, ranking]
 image: serp-ranking.png
 ---
 
-After my grad school class in algorithms, I was inspired to discet them a bit more.
-
-[Read all about it here](https://www.linkedin.com/pulse/good-ol-algorithms-jonathan-hilgart/?trackingId=Q9%2FkvYEgAd7bYiqgyHseGg%3D%3D)
-
 
 At Neeva, we spent a lot of time working on our ranking stack. 
 In particular, for UGC content we've found that 'real answers by real people' is often the reason people execute a query on a search engine.
