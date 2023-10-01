@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Yearly Goals
+title: Goals
 category: yearly_goals
 permalink: /goals
 ---
