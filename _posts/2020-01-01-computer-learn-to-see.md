@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "How do computers learn to see"
