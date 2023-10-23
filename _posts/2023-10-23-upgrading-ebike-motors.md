@@ -11,10 +11,10 @@ This is a short article about my experience upgrading the rear hub motor of the 
 Overall, it's a great bike but since I was commuting 15+ miles each way to San Mateo, I needed something with a little mor oomph. Therefore, I set out to upgrade my motor from the provided 500w motor to a 1500w motor.
 
 In general, I learned there are three components to make an ebike go fast fast fast. 
-(1) Motor capacity and voltage 
-(2) Controller max amps
-(3) Motor max wattage
-(4) Battery capacity.
+1) Motor capacity and voltage 
+2) Controller max amps
+3) Motor max wattage
+4) Battery capacity.
 The general formula is (battery voltage * controller max amps = watts delivered to your motor). If the watts delivered to your motor << the max rating for your motor, you can upgrade your battery/controller.
 If the watts delivered is >> the max rating on your motor you can consider upgrading your motor. Although, most modern motors can run 25-50% higher than the max watts rating.
 
