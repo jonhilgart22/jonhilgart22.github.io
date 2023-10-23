@@ -39,6 +39,6 @@ Here's what the wiring looks like for the new controller. It's a mess, but an or
 ![controller_wires](assets/img/controller_wires.jpg)
 
 
-All in all, it took me close to 15 hours and $1,300 to upgrade the motor, display, battery, and controller. However, if I can sell the old setup for $300, we'll call it a net $1k investment which is significantly cheaper than buying a brand-new bike. Would I do this again, maybe? It's definitely easier to buy a new bike than rip apart an old one, but I came away from it all with a better understanding of how e-bike electronics work.
+All in all, it took me close to 15 hours and $1,000 to upgrade the motor, display, battery, and controller. However, if I can sell the old setup for $300, we'll call it a net $700 investment which is significantly cheaper than buying a brand-new bike. Would I do this again, maybe? It's definitely easier to buy a new bike than rip apart an old one, but I came away from it all with a better understanding of how e-bike electronics work.
 
 I hope this helps someone else! Otherwise, it's a good reminder for me to not dive into these types of projects head first...
