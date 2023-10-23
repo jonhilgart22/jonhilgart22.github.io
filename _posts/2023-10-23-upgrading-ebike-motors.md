@@ -33,7 +33,7 @@ For this project, I decided to take on a full rebuild, not recommended, and upgr
 Here's what the wiring looks like for the new controller. It's a mess, but an organized mess.
 
 
-<img src="https://i.imgur.com/ZWnhY9T.png](https://github.com/jonhilgart22/jonhilgart22.github.io/blob/gh-pages/assets/img/controller_wires.jpg)" width=50% height=50%>
+<img src="https://github.com/jonhilgart22/jonhilgart22.github.io/blob/gh-pages/assets/img/controller_wires.jpg" width=50% height=50%>
 
 
 
