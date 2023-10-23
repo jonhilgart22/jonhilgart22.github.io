@@ -1,6 +1,3 @@
-<!-- upgrade-ebike.html --> 
-<script src="https://rawcdn.githack.com/oscarmorrison/md-page/master/md-page.js"></script><noscript>
-
 ---
 layout: post
 title: "Upgrading e-bike hub motors"
