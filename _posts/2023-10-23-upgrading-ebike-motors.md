@@ -32,7 +32,8 @@ For this project, I decided to take on a full rebuild, not recommended, and upgr
 
 Here's what the wiring looks like for the new controller. It's a mess, but an organized mess.
 
-![controller wires](https://github.com/jonhilgart22/jonhilgart22.github.io/blob/gh-pages/assets/img/controller_wires.jpg)
+<img src="https://github.com/favicon.ico](https://github.com/jonhilgart22/jonhilgart22.github.io/blob/gh-pages/assets/img/controller_wires.jpg)" width="48">
+
 
 All in all, it took me close to 15 hours and $1,300 to upgrade the motor, display, battery, and controller. However, if I can sell the old setup for $300, we'll call it a net $1k investment which is significantly cheaper than buying a brand-new bike. Would I do this again, maybe? It's definitely easier to buy a new bike than rip apart an old one, but I came away from it all with a better understanding of how e-bike electronics work.
 
