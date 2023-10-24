@@ -11,4 +11,4 @@ Hi there! I'm Jonathan. A backend engineer with a focus on building ML systems. 
 
 In my free time, I do a lot of biking around Alameda with my sons Luka and Theo (Luka shown below).
 
-![me_and_luka](assets/img/me_and_luka.jpg)
+![me_and_luka](https://github.com/jonhilgart22/jonhilgart22.github.io/blob/gh-pages/assets/img/me_and_luka_bike.jpg)
