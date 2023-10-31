@@ -12,4 +12,9 @@ I've touched most parts of marketing, adtech, machine learning, NLP, LLMs ...etc
 * Leveraging LLMs for ranking
 * Building text2sql copilots
 
+Before all of that, I did my undergrad ar Brown University and grad schools at University of New Haven and Georgia Tech.
+
+
+![me_and_luka](assets/img/me_and_luka_bike.jpg)
+
 Feel free to reach out; I love to connect and chat!
