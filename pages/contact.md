@@ -4,4 +4,4 @@ title: Contact
 permalink: /contact
 ---
 
-Feel free to drop me an email at jonathan.hilgart@gmail.com!
+Feel free to drop me an email at hi@jonathanhilgart.com!
