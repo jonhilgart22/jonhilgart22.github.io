@@ -1,13 +1,16 @@
 {% assign current_date = page.date %}
-{% assign start_date = current_date | minus: 15778476 %} <!-- Roughly six months in seconds -->
-{% assign end_date = current_date | plus: 15778476 %} <!-- Roughly six months in seconds -->
+{% assign six_months_in_seconds = 15778476 %}
+{% assign start_date = current_date | date: '%s' | minus: six_months_in_seconds | date: '%Y-%m-%d' %}
+{% assign end_date = current_date | date: '%s' | plus: six_months_in_seconds | date: '%Y-%m-%d' %}
 {% assign related_posts = "" | split: "|" %} <!-- Initialize an empty array -->
 
 <!-- Collect posts within the six-month window -->
 {% for post in site.posts %}
-  {% if post.date >= start_date and post.date <= end_date and post.url != page.url %}
-    {% assign related_posts = related_posts | push: post %}
-  {% endif %}
+  {% unless post.url == page.url %}
+    {% if post.date | date: '%Y-%m-%d' >= start_date and post.date | date: '%Y-%m-%d' <= end_date %}
+      {% assign related_posts = related_posts | push: post %}
+    {% endif %}
+  {% endunless %}
 {% endfor %}
 
 <div class="related">
