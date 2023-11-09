@@ -1,27 +1,34 @@
 {% assign current_date = page.date %}
 {% assign start_date = current_date | minus: 15778476 %} <!-- Roughly six months in seconds -->
 {% assign end_date = current_date | plus: 15778476 %} <!-- Roughly six months in seconds -->
+{% assign related_posts = "" | split: "|" %} <!-- Initialize an empty array -->
+
+<!-- Collect posts within the six-month window -->
+{% for post in site.posts %}
+  {% if post.date >= start_date and post.date <= end_date and post.url != page.url %}
+    {% assign related_posts = related_posts | push: post %}
+  {% endif %}
+{% endfor %}
 
 <div class="related">
   <h2>{{ site.data.settings.related_posts }}</h2>
   <ul class="related-posts">
-    {% for post in site.posts %}
-      {% if post.date >= start_date and post.date <= end_date and post.url != page.url %}
-        <li>
-          <h3>
-            <a href="{{ post.url | prepend: site.baseurl }}">
-              <div class="related-thumbnail">
-                {% if post.image %}
-                  <img src="{{ post.image | prepend: site.baseurl }}/assets/img/{{ post.image }}">
-                {% endif %}
-              </div>
-              <div class="related-title">
-                {{ post.title }}
-              </div>
-            </a>
-          </h3>
-        </li>
-      {% endif %}
+    <!-- Limit the loop to two posts -->
+    {% for post in related_posts limit:2 %}
+      <li>
+        <h3>
+          <a href="{{ post.url | prepend: site.baseurl }}">
+            <div class="related-thumbnail">
+              {% if post.image %}
+                <img src="{{ site.github.url }}/assets/img/{{ post.image }}" alt="{{ post.title }}">
+              {% endif %}
+            </div>
+            <div class="related-title">
+              {{ post.title }}
+            </div>
+          </a>
+        </h3>
+      </li>
     {% endfor %}
   </ul>
 </div>
