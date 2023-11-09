@@ -1,47 +1,27 @@
+{% assign current_date = page.date %}
+{% assign start_date = current_date | minus: 15778476 %} <!-- Roughly six months in seconds -->
+{% assign end_date = current_date | plus: 15778476 %} <!-- Roughly six months in seconds -->
+
 <div class="related">
   <h2>{{ site.data.settings.related_posts }}</h2>
   <ul class="related-posts">
-    {% assign current_index = -1 %}
     {% for post in site.posts %}
-      {% if post.url == page.url %}
-        {% assign current_index = forloop.index0 %}
+      {% if post.date >= start_date and post.date <= end_date and post.url != page.url %}
+        <li>
+          <h3>
+            <a href="{{ post.url | prepend: site.baseurl }}">
+              <div class="related-thumbnail">
+                {% if post.image %}
+                  <img src="{{ post.image | prepend: site.baseurl }}/assets/img/{{ post.image }}">
+                {% endif %}
+              </div>
+              <div class="related-title">
+                {{ post.title }}
+              </div>
+            </a>
+          </h3>
+        </li>
       {% endif %}
-    {% endfor %}
-
-    {% assign prev_index1 = current_index | minus: 1 %}
-    {% assign prev_index2 = current_index | minus: 2 %}
-    {% assign next_index1 = current_index | plus: 1 %}
-    {% assign next_index2 = current_index | plus: 2 %}
-    {% assign related_posts = "" | split: "," %}
-
-    {% if site.posts[prev_index2] %}
-      {% assign related_posts = related_posts | push: site.posts[prev_index2] %}
-    {% endif %}
-    {% if site.posts[prev_index1] %}
-      {% assign related_posts = related_posts | push: site.posts[prev_index1] %}
-    {% endif %}
-    {% if site.posts[next_index1] %}
-      {% assign related_posts = related_posts | push: site.posts[next_index1] %}
-    {% endif %}
-    {% if site.posts[next_index2] %}
-      {% assign related_posts = related_posts | push: site.posts[next_index2] %}
-    {% endif %}
-
-    {% for mypost in related_posts %}
-      <li>
-        <h3>
-          <a href="{{ site.github.url }}{{ mypost.url }}">
-            <div class="related-thumbnail">
-              {% if mypost.image %}
-                <img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ mypost.image }}">
-              {% endif %}
-            </div>
-            <div class="related-title">
-              {{ mypost.title }}
-            </div>
-          </a>
-        </h3>
-      </li>
     {% endfor %}
   </ul>
 </div>
