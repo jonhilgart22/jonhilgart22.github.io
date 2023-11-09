@@ -16,7 +16,7 @@ menu:
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
 - {icon: 'twitter', link:    'https://twitter.com/topofthehil'}
-- {icon: 'envelope', link:   'mailto:hi@jonathanhilgart.com}
+- {icon: 'envelope', link:   'mailto:hi@jonathanhilgart.com'}
 
 # Customize site text
 pagination:
