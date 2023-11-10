@@ -1,29 +1,29 @@
-{% assign current_date = page.date %}
-{% assign six_months_in_seconds = 15778476 %}
-{% assign start_date = current_date | date: '%s' | minus: six_months_in_seconds | date: '%Y-%m-%d' %}
-{% assign end_date = current_date | date: '%s' | plus: six_months_in_seconds | date: '%Y-%m-%d' %}
-{% assign related_posts = "" | split: "|" %} <!-- Initialize an empty array -->
+{% assign related_posts = site.posts | where_exp: "post", "post.url != page.url" %}
+{% assign count = related_posts | size %}
+{% assign indexes = "" | split: "" %}
 
-<!-- Collect posts within the six-month window -->
-{% for post in site.posts %}
-  {% unless post.url == page.url %}
-    {% if post.date | date: '%Y-%m-%d' >= start_date and post.date | date: '%Y-%m-%d' <= end_date %}
-      {% assign related_posts = related_posts | push: post %}
-    {% endif %}
+<!-- Create a list of random indexes -->
+{% for i in (1..2) %}
+  {% assign index = "now" | date: "%N" | modulo: count %}
+  {% unless indexes contains index %}
+    {% assign indexes = indexes | push: index %}
+  {% else %}
+    {% assign i = i | minus: 1 %} <!-- If index already included, redo the loop iteration -->
   {% endunless %}
 {% endfor %}
 
 <div class="related">
   <h2>{{ site.data.settings.related_posts }}</h2>
   <ul class="related-posts">
-    <!-- Limit the loop to two posts -->
-    {% for post in related_posts limit:2 %}
+    <!-- Output two random posts using the random indexes -->
+    {% for index in indexes %}
+      {% assign post = related_posts[index] %}
       <li>
         <h3>
           <a href="{{ post.url | prepend: site.baseurl }}">
             <div class="related-thumbnail">
               {% if post.image %}
-                <img src="{{ site.github.url }}/assets/img/{{ post.image }}" alt="{{ post.title }}">
+                <img src="{{ github.url }}/assets/img/{{ post.image }}" alt="{{ post.title }}">
               {% endif %}
             </div>
             <div class="related-title">
